@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findVowel(str) {
+        let vowel = ["u", "e", "o", "a", "i"];
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+            for (let j = 0; j < vowel.length; j++) {
+                if (str[i].toLowerCase() === vowel[j]) {
+                    count++;
+                }
+            }
+        }
+        if (count === 0) {
+            return false;
+        } else {
+            return count;
+        }
+    }
+
+
+    let string = prompt('Nhập vào 1 chuỗi bất kỳ');
+    alert("Dãy có tổng cộng " + findVowel(string) + " ký tự nguyên âm");
+</script>
+</body>
+</html>
